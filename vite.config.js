@@ -12,9 +12,12 @@ export default defineConfig({
       },
       includeAssets: [
         'favicon.png',
+        'apple-touch-icon.png',
+        'balubal-gad-seal.png',
         'balubal-gad-seal.jpg',
         'icons/icon-192.png',
         'icons/icon-512.png',
+        'icons/icon-maskable-512.png',
         'manifest.webmanifest'
       ],
       manifest: {
@@ -41,7 +44,7 @@ export default defineConfig({
             purpose: 'any'
           },
           {
-            src: '/icons/icon-512.png',
+            src: '/icons/icon-maskable-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable'
