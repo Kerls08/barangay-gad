@@ -118,18 +118,7 @@ export const HomeOverview = ({ onNavigateTab }) => {
       </div>
 
       {/* Emergency Quick Access Box */}
-      <div style={{
-        background: '#ffffff',
-        border: '1.5px solid #fee2e2',
-        borderRadius: '16px',
-        padding: '20px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        gap: '14px',
-        boxShadow: '0 2px 8px rgba(220, 38, 38, 0.08)'
-      }}>
+      <div className="emergency-callout-card">
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{
             width: '42px',
@@ -154,18 +143,16 @@ export const HomeOverview = ({ onNavigateTab }) => {
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '8px' }}>
+        <div className="emergency-callout-actions">
           <a
             href="tel:911"
             className="btn-danger-action"
-            style={{ padding: '8px 16px', fontSize: '0.82rem' }}
           >
-            <PhoneCall size={14} /> 911 Rescue
+            <PhoneCall size={16} /> 911 Rescue
           </a>
           <button
             type="button"
             className="btn-primary-action"
-            style={{ padding: '8px 16px', fontSize: '0.82rem' }}
             onClick={() => onNavigateTab('hotlines')}
           >
             View All Hotlines

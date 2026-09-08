@@ -21,19 +21,7 @@ export const HotlinesHub = ({ onShowToast }) => {
       </div>
 
       {/* Immediate Danger Banner */}
-      <div style={{
-        background: 'linear-gradient(135deg, #b91c1c, #991b1b)',
-        color: '#ffffff',
-        padding: '16px 20px',
-        borderRadius: '16px',
-        marginBottom: '20px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        gap: '14px',
-        boxShadow: '0 4px 14px rgba(185, 28, 28, 0.3)'
-      }}>
+      <div className="danger-banner">
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <AlertCircle size={28} style={{ color: '#fca5a5', flexShrink: 0 }} />
           <div>
@@ -45,11 +33,11 @@ export const HotlinesHub = ({ onShowToast }) => {
             </div>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: '8px' }}>
+        <div>
           <a
             href="tel:911"
             className="btn-primary-action"
-            style={{ padding: '8px 16px', color: '#b91c1c', fontWeight: '800' }}
+            style={{ color: '#b91c1c', fontWeight: '800' }}
           >
             <PhoneCall size={16} /> Dial 911
           </a>
