@@ -10,6 +10,7 @@ import { HomeOverview } from './components/home/HomeOverview'
 import { ServicesDirectory } from './components/directory/ServicesDirectory'
 import { VawcTimeline } from './components/vawc/VawcTimeline'
 import { HotlinesHub } from './components/emergency/HotlinesHub'
+import { OfflineNotice } from './components/layout/OfflineNotice'
 
 function MainApp() {
   const [activeTab, setActiveTab] = useState('home')
@@ -46,6 +47,7 @@ function MainApp() {
 
       {/* Main Content Area */}
       <main className="main-content" id="main-content">
+        <OfflineNotice />
         <SafetyBanner />
         <InstallPrompt />
 

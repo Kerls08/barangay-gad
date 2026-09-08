@@ -1,7 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import { translations } from '../data/locales'
+export { useLanguage } from './useLanguage'
 
-const LanguageContext = createContext()
+export const LanguageContext = createContext()
 
 export const LanguageProvider = ({ children }) => {
   // Load saved preference or default to English
@@ -27,12 +28,4 @@ export const LanguageProvider = ({ children }) => {
       {children}
     </LanguageContext.Provider>
   )
-}
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext)
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider')
-  }
-  return context
 }
